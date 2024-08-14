@@ -1,0 +1,313 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Majestic Admin Pro</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="assets/images/favicon.ico" />
+</head>
+<body>
+  
+  <div class="container-scroller">
+    <div class="row p-0 m-0 proBanner" id="proBanner">
+      <div class="col-md-12 p-0 m-0">
+        <div class="card-body card-body-padding px-3 d-flex align-items-center justify-content-between">
+          <div class="ps-lg-1">
+            <div class="d-flex align-items-center justify-content-between">
+              <p class="mb-0 font-weight-medium me-3 buy-now-text">Free 24/7 customer support, updates, and more with this template!</p>
+              <a href="https://www.bootstrapdash.com/product/majestic-admin-pro/?utm_source=navbar&utm_medium=productdemo&utm_campaign=getpro" target="_blank" class="btn me-2 buy-now-btn border-0">Buy Now</a>
+            </div>
+          </div>
+          <div class="d-flex align-items-center justify-content-between">
+            <a href="https://www.bootstrapdash.com/product/majestic-admin-pro/"><i class="mdi mdi-home me-3 text-white"></i></a>
+            <button id="bannerClose" class="btn border-0 p-0">
+              <i class="mdi mdi-close text-white me-0"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+  <div class="navbar-brand-wrapper d-flex justify-content-center">
+    <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
+      <a class="navbar-brand brand-logo" href="index.html"><img src="../src/assets/images/logo.png"
+          alt="logo" /></a>
+      <a class="navbar-brand brand-logo-white" href="index.html"><img src="../src/assets/images/logo.png"
+          alt="logo" /></a>
+      <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../src/assets/images/logo.png"
+          alt="logo" /></a>
+      <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+        <span class="mdi mdi-sort-variant"></span>
+      </button>
+    </div>
+  </div>
+  <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+    <ul class="navbar-nav me-lg-4 w-100">
+      <li class="nav-item nav-search d-none d-lg-block w-100">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="search">
+              <i class="mdi mdi-magnify"></i>
+            </span>
+          </div>
+          <input type="text" class="form-control" placeholder="Search now" aria-label="search"
+            aria-describedby="search">
+        </div>
+      </li>
+    </ul>
+  
+    <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+      data-toggle="offcanvas">
+      <span class="mdi mdi-menu"></span>
+    </button>
+  </div>
+</nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">      
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">
+        <i class="mdi mdi-home menu-icon"></i>
+        <span class="menu-title">Admin Dashboard</span>
+      </a>
+    </li>    
+    
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+        <i class="mdi mdi-account menu-icon"></i>
+        <span class="menu-title">User Pages</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="auth">
+        <ul class="nav flex-column sub-menu">
+
+          <li class="nav-item" onclick="window.location.href='pages/samples/Admin/create.php'"> <a class="nav-link"> Dashboard </a></li>
+          <li class="nav-item" onclick="window.location.href='pages/samples/user/user_pages/login.php'"> <a class="nav-link" > Login </a></li>          
+          <li class="nav-item" onclick="window.location.href='pages/samples/Admin/manage_posts.php'"> <a class="nav-link" > Blogs </a></li>          
+          <li class="nav-item" onclick="window.location.href='pages/samples/user/user_pages/register.php'"> <a class="nav-link" > Register </a></li>                    
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../../docs/documentation.html">
+        <i class="mdi mdi-file-document-box menu-icon"></i>
+        <span class="menu-title">Documentation</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="d-flex justify-content-between flex-wrap">
+                <div class="d-flex align-items-end flex-wrap">
+                  <div class="me-md-3 me-xl-5">
+                    <h2>Welcome back,</h2>
+                    <p class="mb-md-0">Your analytics dashboard template.</p>
+                  </div>
+                  <div class="d-flex">
+                    <i class="mdi mdi-home text-muted hover-cursor"></i>
+                    <p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;Dashboard&nbsp;/&nbsp;</p>
+                    <p class="text-primary mb-0 hover-cursor">Analytics</p>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-end flex-wrap">
+                  <button type="button" class="btn btn-light bg-white btn-icon me-3 d-none d-md-block ">
+                    <i class="mdi mdi-download text-muted"></i>
+                  </button>
+                  <button type="button" class="btn btn-light bg-white btn-icon me-3 mt-2 mt-xl-0">
+                    <i class="mdi mdi-clock-outline text-muted"></i>
+                  </button>
+                  <button type="button" class="btn btn-light bg-white btn-icon me-3 mt-2 mt-xl-0">
+                    <i class="mdi mdi-plus text-muted"></i>
+                  </button>
+                  <button class="btn btn-primary mt-2 mt-xl-0">Download report</button>
+                </div>
+              </div>
+            </div>
+          </div>
+             
+         
+          <div class="row">
+            <div class="col-md-7 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title">Cash deposits</p>
+                  <p class="mb-4">To start a blog, think of a topic about and first brainstorm party is ways to write details</p>
+                  <div id="cash-deposits-chart-legend" class="d-flex justify-content-center pt-3 legend-small"></div>
+                  <canvas id="cash-deposits-chart"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title">Total sales</p>
+                  <h1>$ 28835</h1>
+                  <h4>Gross sales over the years</h4>
+                  <p class="text-muted">Today, many people rely on computers to do homework, work, and create or store useful information. Therefore, it is important </p>
+                  <div id="total-sales-chart-legend" class="legend-small"></div>                  
+                </div>
+                <canvas id="total-sales-chart"></canvas>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 grid-margin grid-margin-md-0 stretch-card">
+              <div class="card border-0 bg-primary text-white">
+                <div id="downloads-carousel" class="carousel slide card-carousel" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="card-body pb-0">
+                        <p class="card-title text-white">Downloads</p>
+                        <h1>8543</h1>
+                        <h4>Growth 58%</h4>
+                      </div>
+                      <canvas height="110" id="downloads-chart-a"></canvas>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="card-body pb-0">
+                        <p class="card-title text-white">Uploads</p>
+                        <h1>4533</h1>
+                        <h4>Growth 32%</h4>
+                      </div>
+                      <canvas height="110" id="downloads-chart-b"></canvas>
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev control-light" href="#downloads-carousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </a>
+                  <a class="carousel-control-next control-light" href="#downloads-carousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </a>
+                </div>  
+              </div>
+            </div>
+            <div class="col-md-4 grid-margin grid-margin-md-0 stretch-card">
+              <div class="card border-0 bg-warning text-white">
+                <div id="feedbacks-carousel" class="carousel slide card-carousel" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="card-body pb-0">
+                        <p class="card-title text-white">feedbacks</p>
+                        <h1>3568</h1>
+                        <h4>Growth 12%</h4>
+                      </div>
+                      <canvas height="110" id="feedbacks-chart-a"></canvas>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="card-body pb-0">
+                        <p class="card-title text-white">feedbacks</p>
+                        <h1>8290</h1>
+                        <h4>Growth 11%</h4>
+                      </div>
+                      <canvas height="110" id="feedbacks-chart-b"></canvas>
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev control-light" href="#feedbacks-carousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </a>
+                  <a class="carousel-control-next control-light" href="#feedbacks-carousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </a>
+                </div>  
+              </div>
+            </div>
+            <div class="col-md-4 grid-margin grid-margin-md-0 stretch-card">
+              <div class="card border-0 bg-success text-white">
+                <div id="customers-carousel" class="carousel slide card-carousel" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="card-body pb-0">
+                        <p class="card-title text-white">customers</p>
+                        <h1>4567</h1>
+                        <h4>Growth 31%</h4>
+                      </div>
+                      <canvas height="110" id="customers-chart-a"></canvas>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="card-body pb-0">
+                        <p class="card-title text-white">Users</p>
+                        <h1>1782</h1>
+                        <h4>Growth 62%</h4>
+                      </div>
+                      <canvas height="110" id="customers-chart-b"></canvas>
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev control-light" href="#customers-carousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </a>
+                  <a class="carousel-control-next control-light" href="#customers-carousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </a>
+                </div>  
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+  <div class="d-sm-flex justify-content-center justify-content-sm-between">
+    <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2024 <a
+        href="https://www.bootstrapdash.com/" target="_blank">Bootstrapdash</a>. All rights reserved.</span>
+    <span class="float-none float-sm-end d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i
+        class="mdi mdi-heart text-danger"></i></span>
+  </div>
+</footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <script src="assets/vendors/chart.js/chart.umd.js"></script>
+  <script src="assets/vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="assets/js/off-canvas.js"></script>
+  <script src="assets/js/hoverable-collapse.js"></script>
+  <script src="assets/js/template.js"></script>
+  <script src="assets/js/settings.js"></script>
+  <script src="assets/js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/proBanner.js"></script>
+
+  <!-- End custom js for this page-->
+  <script src="assets/js/jquery.cookie.js" type="text/javascript"></script>
+</body>
+
+</html>
+
