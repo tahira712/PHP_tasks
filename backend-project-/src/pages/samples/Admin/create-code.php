@@ -6,7 +6,10 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
     header('Location: ../user/user_pages/login.php');
     exit();
 }
-
+// else{
+//     header('Location: ../Admin/create.php');
+//     exit();
+// }
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['create_category'])) {
         $category_name = trim($_POST['category_name']);
@@ -69,6 +72,10 @@ if (!isset($_SESSION['user_id'])) {
     header('Location: ../user/user_pages/login.php');
     exit();
 }
+// else{
+//     header('Location: ../Admin/create.php');
+//     exit();
+// }
 
 $user_id = $_SESSION['user_id'];
 

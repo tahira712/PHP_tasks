@@ -59,6 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         $stmt = $pdo->prepare("INSERT INTO users (username, password, birth_date, gender, first_name, last_name, father_name, email, profile_image, otp, otp_expiry) VALUES (:username, :password, :birth_date, :gender, :first_name, :last_name, :father_name, :email, :profile_image, :otp, :otp_expiry)");
         $stmt->bindParam(':username', $username);
+        
         $stmt->bindParam(':password', $hashedPassword);
         $stmt->bindParam(':birth_date', $birth_date);
         $stmt->bindParam(':gender', $gender);

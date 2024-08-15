@@ -98,3 +98,4 @@ include './create-code.php'
 </html>
 <?php
 include './publish.php';
+include './manage_users.php';

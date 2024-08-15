@@ -1,5 +1,5 @@
 <?php
-$dsn = 'mysql:host=localhost;dbname=backend=project;charset=utf8'; // Correct DSN string
+$dsn = 'mysql:host=localhost;dbname=backend=project;charset=utf8'; 
 $username = 'root';
 $password = '';
 

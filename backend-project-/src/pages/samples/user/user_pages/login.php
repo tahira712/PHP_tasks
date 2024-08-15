@@ -15,13 +15,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if ($user) {
-                if (password_verify($password, $user['password'])) {
+                if ($user['is_active'] == 0) {
+                    $error_message = 'Your account is deactivated. Please contact your admin.';
+                } elseif (password_verify($password, $user['password'])) {
                     $_SESSION['user_id'] = $user['id'];
                     $_SESSION['role'] = $user['role'];
                     header('Location: dashboard.php');
                     exit();
                 } else {
-                    echo $user['password'] . $password . $username;
                     $error_message = "Invalid username or password!";
                 }
             } else {

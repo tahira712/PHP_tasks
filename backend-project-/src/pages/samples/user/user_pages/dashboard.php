@@ -22,9 +22,10 @@ try {
     }
 
     if ($user['role'] === 'admin') {
-        header('Location: Admin/create.php');
+        header('Location: ../../Admin/create.php');
         exit();
     }
+    
 
 } catch (PDOException $e) {
     echo "<div class='alert alert-danger' role='alert'>Error: " . htmlspecialchars($e->getMessage()) . "</div>";
