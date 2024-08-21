@@ -5,12 +5,26 @@ if (!isset($conn)) {
     die('Database connection not established.');
 }
 
-$sql_all_posts = "SELECT posts.*, categories.name AS category_name 
-                  FROM posts 
-                  LEFT JOIN categories ON posts.category_id = categories.id
-                  WHERE posts.published = 1";
-$stmt_all_posts = $conn->query($sql_all_posts);
-$posts = $stmt_all_posts->fetchAll();
+$posts_per_page = 6;
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+$start = ($page - 1) * $posts_per_page;
+
+$sql_count = "SELECT COUNT(*) as total_posts FROM posts WHERE published = 1";
+$stmt_count = $conn->query($sql_count);
+$total_posts = $stmt_count->fetch()['total_posts'];
+$total_pages = ceil($total_posts / $posts_per_page);
+
+$sql_posts = "SELECT posts.*, categories.name AS category_name 
+              FROM posts 
+              LEFT JOIN categories ON posts.category_id = categories.id 
+              WHERE posts.published = 1
+              ORDER BY posts.id DESC
+              LIMIT :start, :limit";
+$stmt_posts = $conn->prepare($sql_posts);
+$stmt_posts->bindValue(':start', $start, PDO::PARAM_INT);
+$stmt_posts->bindValue(':limit', $posts_per_page, PDO::PARAM_INT);
+$stmt_posts->execute();
+$posts = $stmt_posts->fetchAll();
 
 $sql_recent_posts = "SELECT posts.*, categories.name AS category_name 
                      FROM posts 
@@ -74,6 +88,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
             <?php endforeach; ?>
         </div>
+
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                <li class="page-item <?= $page <= 1 ? 'disabled' : '' ?>">
+                    <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+                    <li class="page-item <?= $i == $page ? 'active' : '' ?>">
+                        <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+                    </li>
+                <?php endfor; ?>
+                <li class="page-item <?= $page >= $total_pages ? 'disabled' : '' ?>">
+                    <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
         <h2 class="mt-5 mb-4">Last 5 Posts</h2>
         <ul class="list-group">
             <?php foreach ($recent_posts as $blog): ?>

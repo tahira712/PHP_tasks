@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +40,8 @@
                 require '../db_connection.php';
 
                 try {
-                    $sql = "SELECT id, username, first_name, last_name, email, is_active FROM users";
+                    $sql = "SELECT id, username, first_name, last_name, email, is_active FROM users WHERE role <> 'admin'";
+
                     $stmt = $conn->query($sql);
 
                     if ($stmt->rowCount() > 0) {
@@ -66,10 +75,14 @@
                 ?>
             </tbody>
         </table>
+        <a href="../../../index.html" class="btn btn-secondary">Back to main page</a>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
 </body>
 </html>

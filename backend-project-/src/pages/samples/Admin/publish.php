@@ -75,7 +75,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <?php endforeach; ?>
             </tbody>
         </table>
-    <a href="../../../index.html" class="btn btn-secondary">Back to main page</a>
 
     </div>
 
