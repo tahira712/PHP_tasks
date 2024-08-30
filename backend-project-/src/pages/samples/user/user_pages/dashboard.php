@@ -29,8 +29,7 @@ try {
     echo "<div class='alert alert-danger' role='alert'>Error: " . htmlspecialchars($e->getMessage()) . "</div>";
     exit();
 }
-
-$base_image_path = './uploads/';
+$base_image_path = '../../uploads/';
 
 $results_per_page = 3; 
 $current_page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
